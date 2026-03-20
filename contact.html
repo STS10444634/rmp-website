@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - RMP Legal Compliance & Risk Advisory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="icon.png">
+  <style>
+    /* Fade-in + slide-up for contact card */
+    .animate-card {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideUp 0.8s ease-out forwards;
+    }
+
+    /* Staggered slide-in for form fields */
+    .animate-field {
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideInField 0.6s ease-out forwards;
+    }
+
+    .animate-field:nth-child(1) { animation-delay: 0.2s; }
+    .animate-field:nth-child(2) { animation-delay: 0.3s; }
+    .animate-field:nth-child(3) { animation-delay: 0.4s; }
+    .animate-field:nth-child(4) { animation-delay: 0.5s; }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInField {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Button hover animation */
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
+
+    .btn-hover:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="RMP Logo" class="h-20 w-auto">
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+        <a href="services.html" class="hover:text-teal-600 transition">Services</a>
+        <a href="pricing.html" class="hover:text-teal-600 transition">Pricing</a>
+        <a href="leadership.html" class="hover:text-teal-600 transition">Leadership</a>
+        <a href="contact.html" class="hover:text-teal-600 transition font-semibold">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-5xl font-bold text-center mb-4 text-teal-800">Contact Us</h1>
+      <p class="text-center text-lg text-gray-600 mb-16">
+        We're here to help. Reach out for any inquiries or collaboration.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Contact Info Box - darker, animated -->
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-10 animate-card">
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center">
+              <i class="fas fa-envelope text-3xl text-teal-700"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-teal-800">Get In Touch</h2>
+          </div>
+
+          <div class="space-y-10">
+            <div>
+              <h3 class="text-2xl font-semibold mb-3 text-teal-800">Adv. Boitumelo Rampete</h3>
+              <p class="text-teal-600 font-medium mb-2">Managing Director</p>
+              <p class="mb-1">tumi@rmpinc.co.za</p>
+              <p class="mb-4">legal@rmpinc.co.za</p>
+              <p class="text-lg font-medium">072 516 0550</p>
+              <p class="text-green-600 font-medium">WhatsApp: 067 578 9935</p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-semibold mb-3 text-teal-800">Mr. Lefa Rampete</h3>
+              <p class="text-teal-600 font-medium mb-2">Executive Director</p>
+              <p class="mb-3">lefa@rmpinc.co.za</p>
+              <p class="text-lg font-medium">073 827 0304</p>
+            </div>
+
+            <div class="text-sm text-gray-600 pt-4 border-t border-gray-300">
+              RMP Legal Compliance and Risk Advisory (Pty) Ltd<br/>
+              Johannesburg, South Africa<br/>
+              B-BBEE Level 1 Contributor
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form - animated fields -->
+        <div class="bg-white rounded-2xl shadow-lg p-10">
+          <h3 class="text-2xl font-bold mb-8 text-teal-800">Send us a Message</h3>
+
+          <form 
+            action="https://formsubmit.co/legal@rmpinc.co.za" 
+            method="POST" 
+            class="space-y-6"
+          >
+            <input type="hidden" name="_cc" value="tumi@rmpinc.co.za"/>
+            <input type="hidden" name="_subject" value="New Website Enquiry - RMP"/>
+            <input type="hidden" name="_captcha" value="false"/>
+
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="Your Full Name" 
+              required 
+              class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition animate-field"
+            />
+
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your Email Address" 
+              required 
+              class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition animate-field"
+            />
+
+            <input 
+              type="tel" 
+              name="phone" 
+              placeholder="Phone / WhatsApp Number" 
+              class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition animate-field"
+            />
+
+            <textarea 
+              name="message" 
+              rows="6" 
+              placeholder="How can we help you today?" 
+              required 
+              class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition animate-field resize-none"
+            ></textarea>
+
+            <button 
+              type="submit" 
+              class="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-4 rounded-xl transition duration-300 transform hover:scale-[1.02] btn-hover"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-900 text-white py-12 text-center text-sm">
+    © 2026 RMP Legal Compliance and Risk Advisory (Pty) Ltd • Johannesburg, South Africa • B-BBEE Level 1
+  </footer>
+
+</body>
+</html>
