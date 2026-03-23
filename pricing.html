@@ -26,7 +26,7 @@
   <!-- MAIN CONTENT (on top of faded logo) -->
   <div class="relative z-10">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR with Hamburger Menu for Mobile -->
     <nav class="bg-white shadow sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
@@ -40,9 +40,25 @@
           <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
         </div>
         <div class="flex items-center gap-4">
+          <!-- Hamburger Button for Mobile -->
+          <button id="mobile-menu-btn" class="md:hidden text-teal-700 focus:outline-none">
+            <i class="fas fa-bars text-3xl"></i>
+          </button>
+
           <a href="contact.html" class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition">
             Get a Quote
           </a>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-6 py-4 flex flex-col gap-4 text-center">
+          <a href="index.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Home</a>
+          <a href="services.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Services</a>
+          <a href="pricing.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Pricing</a>
+          <a href="leadership.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Leadership</a>
+          <a href="contact.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Contact</a>
         </div>
       </div>
     </nav>
@@ -318,6 +334,14 @@
   </footer>
 
   </div>
+
+  <!-- Hamburger Menu Toggle Script -->
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>

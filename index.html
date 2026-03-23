@@ -6,20 +6,30 @@
   <title>RMP Legal Compliance & Risk Advisory</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="rmp_legal_logo.png">
+  <link rel="icon" href="icon.png">
 </head>
-<body class="bg-white text-gray-900 relative min-h-screen">
+<body class="bg-white text-gray-900 relative min-h-screen overflow-x-hidden">
 
+  <!-- BACKGROUND FADED LOGO -->
+  <div class="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-25">
+    <img 
+      src="logo.png" 
+      alt="RMP Background Logo" 
+      class="max-w-[85%] max-h-[85%] object-contain"
+    />
+  </div>
 
-  <!-- MAIN CONTENT - higher z-index so text is readable -->
+  <!-- MAIN CONTENT -->
   <div class="relative z-10">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR with Hamburger Menu -->
     <nav class="bg-white shadow sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <img src="rmp_legal_logo.png" alt="RMP Logo" class="h-20 w-auto">
+          <img src="logo.png" alt="RMP Logo" class="h-20 w-auto">
         </div>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:flex gap-8 text-sm font-medium">
           <a href="index.html" class="hover:text-teal-600 transition">Home</a>
           <a href="services.html" class="hover:text-teal-600 transition">Services</a>
@@ -27,10 +37,28 @@
           <a href="leadership.html" class="hover:text-teal-600 transition">Leadership</a>
           <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
         </div>
+
+        <!-- Mobile Hamburger + Get a Quote -->
         <div class="flex items-center gap-4">
+          <!-- Hamburger Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-teal-700 focus:outline-none">
+            <i class="fas fa-bars text-3xl"></i>
+          </button>
+
           <a href="contact.html" class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition">
             Get a Quote
           </a>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-6 py-4 flex flex-col gap-4 text-center">
+          <a href="index.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Home</a>
+          <a href="services.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Services</a>
+          <a href="pricing.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Pricing</a>
+          <a href="leadership.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Leadership</a>
+          <a href="contact.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Contact</a>
         </div>
       </div>
     </nav>
@@ -38,25 +66,22 @@
     <!-- Hero Section -->
     <header class="bg-white py-24 text-center">
       <div class="max-w-5xl mx-auto px-6">
-        <img src="rmp_legal_logo_icon.png" alt="RMP Full Logo" class="mx-auto max-h-64 mb-10">
+        <img src="logo.png" alt="RMP Full Logo" class="mx-auto max-h-64 mb-10">
         <h1 class="text-5xl md:text-6xl font-bold text-teal-800 tracking-tight">
           LEGAL COMPLIANCE AND RISK ADVISORY
         </h1>
       </div>
     </header>
 
-      
-
     <!-- About Company -->
     <section class="py-20 bg-white">
       <div class="max-w-5xl mx-auto px-6">
         <div class="flex flex-col md:flex-row items-start gap-12">
           <div class="md:w-1/3 flex flex-col items-center md:items-start">
-            <img src="rmp_legal_logo_icon.png" alt="RMP Logo Block" class="max-h-48 mb-6">
+            <img src="logo.png" alt="RMP Logo Block" class="max-h-48 mb-6">
             <p class="text-teal-700 font-semibold text-center md:text-left">
               RMP LEGAL COMPLIANCE<br>AND RISK ADV
             </p>
-
           </div>
 
           <div class="md:w-2/3">
@@ -77,6 +102,14 @@
     </footer>
 
   </div>
+
+  <!-- Hamburger Menu Toggle Script -->
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>

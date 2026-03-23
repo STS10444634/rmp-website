@@ -8,142 +8,184 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="icon.png">
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 relative min-h-screen overflow-x-hidden">
 
-  <!-- NAVBAR -->
-  <nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <img src="logo.png" alt="RMP Logo" class="h-14 w-auto">
-      </div>
-      <div class="hidden md:flex gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-        <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-        <a href="pricing.html" class="hover:text-teal-600 transition">Pricing</a>
-        <a href="leadership.html" class="hover:text-teal-600 transition">Leadership</a>
-        <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="contact.html" class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition">
-          Get a Quote
-        </a>
-      </div>
-    </div>
-  </nav>
+  <!-- BACKGROUND FADED LOGO -->
+  <div class="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-25">
+    <img 
+      src="logo.png" 
+      alt="RMP Background Logo" 
+      class="max-w-[85%] max-h-[85%] object-contain"
+    />
+  </div>
 
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h1 class="text-5xl font-bold text-center mb-16 text-teal-800">Our Services</h1>
+  <!-- MAIN CONTENT -->
+  <div class="relative z-10">
 
-      <div class="space-y-16">
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">CORPORATE GOVERNANCE ADVISORY</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Board Governance Frameworks & Charters</li>
-            <li>Directors' Advisory</li>
-            <li>Board & Committee Structures</li>
-            <li>Delegation of Authority Frameworks</li>
-            <li>Board induction & training programmes</li>
-            <li>King V Implementation</li>
-            <li>Ethics and Whistleblowing Frameworks</li>
-          </ul>
+    <!-- NAVBAR with Hamburger Menu -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="RMP Logo" class="h-20 w-auto">
         </div>
 
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">STATUTORY & REGULATORY COMPLIANCE ADVISORY</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Companies Act Compliance Audits</li>
-            <li>Section 26 Advisory</li>
-            <li>Section 30 & 33 Compliance</li>
-            <li>Section 171 </li>
-            <li>Social & Ethics Committee Compliance</li>
-            <li>Regulatory gap analysis</li>
-            <li>Legislative Monitoring and Updates</li>
-            <li>FICA and AML audits</li>
-            <li>Internal & External SHEQ Audits</li>
-            <li>Environmental Services</li>
-            <li>Safety File Services</li>
-          </ul>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+          <a href="services.html" class="hover:text-teal-600 transition">Services</a>
+          <a href="pricing.html" class="hover:text-teal-600 transition">Pricing</a>
+          <a href="leadership.html" class="hover:text-teal-600 transition">Leadership</a>
+          <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
         </div>
 
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">GOVERNANCE, RISK & COMPLIANCE</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Enterprise Risk Management (ERM) Frameworks</li>
-            <li>Legal Risk Identification & Mitigation</li>
-            <li>Compliance Mnitoring Systems</li>
-            <li>Internal Controls Advisory</li>
-            <li>Business Continuity and Crisis Management</li>
-          </ul>
-        </div>
+        <!-- Mobile Hamburger + Get a Quote -->
+        <div class="flex items-center gap-4">
+          <button id="mobile-menu-btn" class="md:hidden text-teal-700 focus:outline-none">
+            <i class="fas fa-bars text-3xl"></i>
+          </button>
 
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">COMMERCIAL & CONTRACTUAL SERVICES</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Drafting &  Reviewing of Commercial Contracts</li>
-            <li>Risk-based Contract Reviews</li>
-            <li>Procurement Policies & SOPs</li>
-            <li>Vendor Due Diligence Systems</li>
-          </ul>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">LABOUR & EMPLOYMENT LAW ADVISORY</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Employment Contracts & Policies</li>
-            <li>Disciplinary & Incapacity process Frameworks</li>
-            <li>HR Compliance Audits</li>
-            <li>POPIA-aligned employee data protection</li>
-          </ul>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">LEGAL, COMPANY SECRETARIAL, CORPORATE STRUCTURING & BUSINESS DEVELOPMENT</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Company Formation, Group Restructures, Holding and Subsidary Company Frameworks</li>
-            <li>Legal Due Diligence for Mergers & Acquisitions</li>
-            <li>Post-Merger Integration Governance</li>
-            <li>Trust Services</li>
-            <li>Insurance & Pension Fund Disputes</li>
-            <li>Banking & Financial Services Law</li>
-            <li>Company Secretarial & Governance Support</li>
-            <li>Policy Development& Internal Controls</li>
-          </ul>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">POLICY DEVELOPMENT & SOP DESIGN</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Corporate Policy Suites</li>
-            <li>Compliance Manuals</li>
-            <li>Ethics & Whistle-blowing Frameworks</li>
-            <li>Health Services Executive Governance Frameworks</li>
-          </ul>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">DISPUTE PREVENTION & PRE-LITIGATION ADVISORY</h2>
-          <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
-            <li>Legal Risk Assessments</li>
-            <li>Dispute Resolution Frameworks</li>
-            <li>Internal Investigations</li>
-          </ul>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl shadow p-10">
-          <h2 class="text-3xl font-bold text-teal-700 mb-6">TRAINING & CAPACITY BUILDING</h2>
-          <ul class="list-disc pl-6 text-base space-y-2">
-            <li>Board, executive, and employee training on governance, compliance, risk, and SHEQ.</li>
-          </ul>
+          <a href="contact.html" class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition">
+            Get a Quote
+          </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-teal-900 text-white py-12 text-center text-sm">
-    © 2026 RMP Legal Compliance and Risk Advisory (Pty) Ltd • Johannesburg, South Africa • B-BBEE Level 1
-  </footer>
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-6 py-4 flex flex-col gap-4 text-center">
+          <a href="index.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Home</a>
+          <a href="services.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Services</a>
+          <a href="pricing.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Pricing</a>
+          <a href="leadership.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Leadership</a>
+          <a href="contact.html" class="text-lg font-medium hover:text-teal-600 transition py-2">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SERVICES SECTION -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h1 class="text-5xl font-bold text-center mb-16 text-teal-800">Our Services</h1>
+
+        <div class="space-y-16">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">CORPORATE GOVERNANCE ADVISORY</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Board Governance Frameworks & Charters</li>
+              <li>Directors' Advisory</li>
+              <li>Board & Committee Structures</li>
+              <li>Delegation of Authority Frameworks</li>
+              <li>Board induction & training programmes</li>
+              <li>King IV Implementation</li>
+              <li>Ethics and Whistleblowing Frameworks</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">STATUTORY & REGULATORY COMPLIANCE ADVISORY</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Companies Act Compliance Audits</li>
+              <li>Section 26 Advisory</li>
+              <li>Section 30 & 33 Compliance</li>
+              <li>Section 171</li>
+              <li>Social & Ethics Committee Compliance</li>
+              <li>Regulatory gap analysis</li>
+              <li>Legislative Monitoring and Updates</li>
+              <li>FICA and AML audits</li>
+              <li>Internal & External SHEQ Audits</li>
+              <li>Environmental Services</li>
+              <li>Safety File Services</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">GOVERNANCE, RISK & COMPLIANCE</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Enterprise Risk Management (ERM) Frameworks</li>
+              <li>Legal Risk Identification & Mitigation</li>
+              <li>Compliance Monitoring Systems</li>
+              <li>Internal Controls Advisory</li>
+              <li>Business Continuity and Crisis Management</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">COMMERCIAL & CONTRACTUAL SERVICES</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Drafting & Reviewing of Commercial Contracts</li>
+              <li>Risk-based Contract Reviews</li>
+              <li>Procurement Policies & SOPs</li>
+              <li>Vendor Due Diligence Systems</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">LABOUR & EMPLOYMENT LAW ADVISORY</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Employment Contracts & Policies</li>
+              <li>Disciplinary & Incapacity process Frameworks</li>
+              <li>HR Compliance Audits</li>
+              <li>POPIA-aligned employee data protection</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">LEGAL, COMPANY SECRETARIAL, CORPORATE STRUCTURING & BUSINESS DEVELOPMENT</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Company Formation, Group Restructures, Holding and Subsidiary Company Frameworks</li>
+              <li>Legal Due Diligence for Mergers & Acquisitions</li>
+              <li>Post-Merger Integration Governance</li>
+              <li>Trust Services</li>
+              <li>Insurance & Pension Fund Disputes</li>
+              <li>Banking & Financial Services Law</li>
+              <li>Company Secretarial & Governance Support</li>
+              <li>Policy Development & Internal Controls</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">POLICY DEVELOPMENT & SOP DESIGN</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Corporate Policy Suites</li>
+              <li>Compliance Manuals</li>
+              <li>Ethics & Whistle-blowing Frameworks</li>
+              <li>Health Services Executive Governance Frameworks</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">DISPUTE PREVENTION & PRE-LITIGATION ADVISORY</h2>
+            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-6 text-base">
+              <li>Legal Risk Assessments</li>
+              <li>Dispute Resolution Frameworks</li>
+              <li>Internal Investigations</li>
+            </ul>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 hover:shadow-xl transition-shadow duration-300">
+            <h2 class="text-3xl font-bold text-teal-700 mb-6">TRAINING & CAPACITY BUILDING</h2>
+            <ul class="list-disc pl-6 text-base space-y-2">
+              <li>Board, executive, and employee training on governance, compliance, risk, and SHEQ.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white py-12 text-center text-sm">
+      © 2026 RMP Legal Compliance and Risk Advisory (Pty) Ltd • Johannesburg, South Africa • B-BBEE Level 1
+    </footer>
+
+  </div>
+
+  <!-- Hamburger Menu Toggle Script -->
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
